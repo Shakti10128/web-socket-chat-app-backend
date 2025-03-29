@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "build": "tsc",
-  "start": "npm run build && node ./dist/index.js",
-  "dev": "tsc -b && node ./dist/index.js"
+    "build": "tsc",
+    "start": "npm run build && node ./dist/index.js",
+    "dev": "tsc -b && node ./dist/index.js"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +17,7 @@
     "@types/ws": "^8.18.0",
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
+    "typescript": "^5.8.2",
     "ws": "^8.18.1"
   }
 }
