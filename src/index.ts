@@ -39,7 +39,12 @@ wss.on("connection",function(socket){
             // broadcast this message to all the user who have already joined that room
             allSocket.forEach(x =>{
                 if(currentUserRoom === x.room) {
-                    x.socket.send(parsedMessage.payload.message);
+                    x.socket.send(
+                        JSON.stringify({
+                            type: "chat",
+                            payload: { message: parsedMessage.payload.message },
+                        })
+                    );
                 }
             })
         }
