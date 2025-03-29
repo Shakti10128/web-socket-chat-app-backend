@@ -4,7 +4,7 @@ const ws_1 = require("ws");
 const wss = new ws_1.WebSocketServer({ port: 8080 });
 let allSocket = [];
 wss.on("connection", function (socket) {
-    console.log("hello connection");
+    // console.log("hello connection");
     socket.on("message", (message) => {
         // the message will be string of json object, you can see below, in websocket we can only
         // communicate in binary or strings
